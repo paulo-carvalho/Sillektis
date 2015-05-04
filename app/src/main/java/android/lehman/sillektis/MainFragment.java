@@ -1,11 +1,13 @@
 package android.lehman.sillektis;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
@@ -40,9 +42,26 @@ public class MainFragment extends Fragment {
 //        editTextLatLong = (EditText)rootView.findViewById(R.id.latLon);
 
         ListView listView = (ListView) rootView.findViewById(R.id.listview_debtors);
-        listView.setAdapter(debtorsAdapter);
+        listView.setAdapter(debtorsAdapter); //define the design
+        listView.setOnItemClickListener(new ItemClickListener()); //define functionality
 
         if (D) { Log.d(TAG, "onCreateView completed");}
         return rootView;
+    }
+
+    /*  Class: ItemClickListener
+     *  Description: encapsulates the onClick event for each item of the list.
+     *  Methods:
+       *  + onItemClick
+     */
+    public class ItemClickListener implements AdapterView.OnItemClickListener {
+
+        @Override
+        public void onItemClick(AdapterView<?> adapter, View view, int position, long id) {
+            String debtorName = (String)adapter.getItemAtPosition(position);
+
+            Intent intent = new Intent(view.getContext(), ViewDebtorActivity.class);
+            view.getContext().startActivity(intent);
+        }
     }
 }
