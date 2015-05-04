@@ -5,4 +5,9 @@
     <string name="action_add">Add New Debtor</string>
     <string name="cancel">Cancel</string>
     <string name="add">Add Debtor</string>
+    <string name="add_newdebtor">Add New Debtor</string>
+    <string name="name">Name</string>
+    <string name="amount">Amount</string>
+    <string name="phone">Phone</string>
+    <string name="email">E-mail</string>
 </resources>

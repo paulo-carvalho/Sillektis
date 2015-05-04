@@ -3,11 +3,16 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/add_newdebtor"/>
+
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:hint="@string/name"
         android:ems="10"
         android:id="@+id/nameDebtor" />
 
@@ -15,6 +20,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
+        android:hint="@string/email"
         android:ems="10"
         android:id="@+id/emailDebtor" />
 
@@ -22,6 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="phone"
+        android:hint="@string/phone"
         android:ems="10"
         android:id="@+id/phoneDebtor" />
 
@@ -29,6 +36,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
+        android:hint="@string/amount"
         android:ems="10"
         android:id="@+id/amountDebtor" />
 
