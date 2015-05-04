@@ -40,7 +40,8 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
-            return true;
+            Intent intent = new Intent(MainActivity.this, SettingsActivity.class);
+            startActivity(intent);
         } else if(id == R.id.action_add) {
             Intent intent = new Intent(MainActivity.this, AddActivity.class);
             startActivity(intent);

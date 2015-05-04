@@ -2,14 +2,18 @@
     <string name="app_name">Sillektis</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-    <string name="action_add">Add New Debtor</string>
     <string name="cancel">Cancel</string>
     <string name="add">Add Debtor</string>
     <string name="add_newdebtor">Add New Debtor</string>
-    <string name="name">Name</string>
-    <string name="amount">Amount</string>
-    <string name="phone">Phone</string>
-    <string name="email">E-mail</string>
     <string name="title_activity_view_debtor">ViewDebtorActivity</string>
     <string name="title_activity_add_debtor">Add New Debtor</string>
+    <string name="remind">Remind</string>
+    <string name="paid">Paid</string>
+    <string name="view_name">Name: </string>
+    <string name="view_phone">Phone: </string>
+    <string name="view_email">E-mail: </string>
+    <string name="view_amount">Amount: </string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:hint="@string/name"
+        android:hint="@string/view_name"
         android:ems="10"
         android:id="@+id/nameDebtor" />
 
@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
-        android:hint="@string/email"
+        android:hint="@string/view_email"
         android:ems="10"
         android:id="@+id/emailDebtor" />
 
@@ -25,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="phone"
-        android:hint="@string/phone"
+        android:hint="@string/view_phone"
         android:ems="10"
         android:id="@+id/phoneDebtor" />
 
@@ -33,7 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="numberDecimal"
-        android:hint="@string/amount"
+        android:hint="@string/view_amount"
         android:ems="10"
         android:id="@+id/amountDebtor" />
 
