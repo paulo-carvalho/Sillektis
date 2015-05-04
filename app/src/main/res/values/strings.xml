@@ -11,4 +11,5 @@
     <string name="phone">Phone</string>
     <string name="email">E-mail</string>
     <string name="title_activity_view_debtor">ViewDebtorActivity</string>
+    <string name="title_activity_add_debtor">Add New Debtor</string>
 </resources>

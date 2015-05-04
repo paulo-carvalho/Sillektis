@@ -20,6 +20,10 @@
             android:name=".ViewDebtorActivity"
             android:label="@string/title_activity_view_debtor" >
         </activity>
+        <activity
+            android:name=".AddActivity"
+            android:label="@string/title_activity_add_debtor" >
+        </activity>
     </application>
 
 </manifest>

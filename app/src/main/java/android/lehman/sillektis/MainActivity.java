@@ -42,9 +42,8 @@ public class MainActivity extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         } else if(id == R.id.action_add) {
-            Fragment fragment = new AddFragment();
-            FragmentManager fragmentManager = getFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.container, fragment).commit();
+            Intent intent = new Intent(MainActivity.this, AddActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);

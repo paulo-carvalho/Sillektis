@@ -1,17 +1,20 @@
 package android.lehman.sillektis;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-
-public class ViewDebtorActivity extends ActionBarActivity {
+/**
+ * Class from Sillektis at android.lehman.sillektis
+ * Created by Paulo-Lehman on 5/4/2015.
+ */
+public class AddActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_view_debtor);
+        setContentView(R.layout.activity_add);
     }
 
 
