@@ -9,6 +9,7 @@ public class Debtor {
     private String email;
     private String phone;
     private Double amount;
+    private Integer paid;
 
     public Debtor() {
         name = "";
@@ -17,11 +18,12 @@ public class Debtor {
         amount = 0.0;
     }
 
-    public Debtor(String name, String email, String phone, Double amount) {
+    public Debtor(String name, String email, String phone, Double amount, Integer paid) {
         this.name = name;
         this.email = email;
         this.phone = phone;
         this.amount = amount;
+        this.paid = paid;
     }
 
     public String getName() {
@@ -54,5 +56,13 @@ public class Debtor {
 
     public void setAmount(Double amount) {
         this.amount = amount;
+    }
+
+    public Integer getPaid() {
+        return paid;
+    }
+
+    public void setPaid(Integer paid) {
+        this.paid = paid;
     }
 }
