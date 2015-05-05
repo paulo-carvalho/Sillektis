@@ -28,6 +28,13 @@
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings" >
         </activity>
+
+        <provider
+            android:name=".data.SillektisContentProvider"
+            android:authorities="android.lehman"
+            android:enabled="true"
+            android:exported="false" >
+        </provider>
     </application>
 
 </manifest>
