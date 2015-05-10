@@ -2,6 +2,8 @@ package android.lehman.sillektis;
 
 import android.app.Fragment;
 import android.content.Intent;
+import android.lehman.sillektis.data.SillektisContract;
+import android.lehman.sillektis.data.SillektisDbHelper;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -10,8 +12,13 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -30,6 +37,7 @@ public class MainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         if (D) { Log.d(TAG, "Starting onCreateView");}
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+        Bundle bundle = new Bundle();
 
         List<String> debtors = new ArrayList<>();
         debtors.add("Debtor 1");
@@ -44,6 +52,26 @@ public class MainFragment extends Fragment {
         ListView listView = (ListView) rootView.findViewById(R.id.listview_debtors);
         listView.setAdapter(debtorsAdapter); //define the design
         listView.setOnItemClickListener(new ItemClickListener()); //define functionality
+
+        SillektisDbHelper sillektisDbHelper = new SillektisDbHelper(getActivity());
+
+        ArrayList<HashMap<String, String>> debtorsArrayList = new ArrayList<>();
+        debtorsArrayList = sillektisDbHelper.selectAllDebtors();
+
+        Iterator<HashMap<String, String>> iterator = debtorsArrayList.iterator();
+        while (iterator.hasNext()) {
+            HashMap<String, String> debtor = iterator.next();
+
+            if(savedInstanceState != null) {
+                TextView debtorName = (TextView) rootView.findViewById(R.id.debtor_list_item_name);
+                if (debtor.get(SillektisContract.DebtorEntry.COLUMN_NAME_DEBTOR) != null)
+                    debtorName.setText(debtor.get(SillektisContract.DebtorEntry.COLUMN_NAME_DEBTOR));
+
+                TextView debtorAmount = (TextView) rootView.findViewById(R.id.debtor_list_item_amount);
+                if (!debtor.get(SillektisContract.DebtorEntry.COLUMN_AMOUNT_DEBTOR).equals(""))
+                    debtorAmount.setText(debtor.get(SillektisContract.DebtorEntry.COLUMN_AMOUNT_DEBTOR));
+            }
+        }
 
         if (D) { Log.d(TAG, "onCreateView completed");}
         return rootView;
